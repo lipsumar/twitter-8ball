@@ -1,0 +1,18 @@
+{
+  "name": "Twitter-8ball",
+  "version": "1.0.0",
+  "description": "Ask your question and shake the ball to know the future...",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Why run tests when you know the future ?\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Emmanuel Pire <piremmanuel@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "twitter": "^1.3.0",
+    "underscore": "^1.8.3"
+  }
+}
