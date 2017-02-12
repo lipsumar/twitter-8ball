@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const Twitter8Ball = require('./lib')
+const port = process.env.PORT || 8080;
 
 app.use(express.static('public'))
 
@@ -16,4 +17,4 @@ app.get('/fetch-live-tweet', (req, res) => {
 	})
 })
 
-app.listen(8080, () => console.log('http://localhost:8080'))
+app.listen(port, () => console.log('http://localhost:' + port))
