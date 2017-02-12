@@ -3,22 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tw8-ball</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
 	<style>
 		html{height:100%;}
 		body{
 			background-color: #090C0B;
-			overflow: hidden;
-			height: 100%
+
+			height: 100%;
+			margin:0 10px 10px 10px;
+
 		}
 		.ball{
 			box-sizing: border-box;
-			padding-left:330px;
 			width:100%;
-			height: 100%;
+
 			display: flex;
 			justify-content: center;
-			align-items: center;
+			align-items: flex-start;
 			cursor: pointer;
 		}
 		.ball--shake{
@@ -29,8 +31,8 @@
 		}
 		.window{
 			background-color: #16171D;
-			width:60vw;
-			height:60vw;
+			width:100vw;
+			height:100vw;
 			border-radius: 100%;
 			display: flex;
 			justify-content: center;
@@ -39,8 +41,9 @@
 		}
 		.triangle-wrap{
 			position: relative;
-			width:40vw;
-			height:35vw;
+			margin-top:10%;
+			width:66vw;
+			height:60vw;
 
 			/*clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
 			-webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);*/
@@ -51,14 +54,14 @@
 		.triangle{
 			background-color: #0D2359;
 			color:#184674;
-			padding:30px 20%;
+			padding:20px 20%;
 			box-sizing: border-box;
 			width:100%;
 			height:100%;
 			font-family: 'Orbitron', sans-serif;
 			font-variant: small-caps;
 			text-align: center;
-			font-size: 5vw;
+			font-size: 8vw;
 
 			display: flex;
 			justify-content: center;
@@ -77,9 +80,9 @@
 		}
 
 		#first-tweet{
-			position: absolute;
-			top:0;
-			left:10px;
+			box-sizing: border-box;
+
+			width:calc(100vw - 20px);
 		}
 
 		@keyframes shake {
@@ -98,6 +101,33 @@
 		  40%, 60% {
 		    transform: translate3d(4px, 0, 0);
 		  }
+		}
+
+
+		@media screen and (min-width: 600px) {
+			.ball{
+				padding-left:330px;
+			}
+			.window{
+				width:60vw;
+				height:60vw;
+			}
+			.triangle-wrap{
+				width:40vw;
+				height:35vw;
+			}
+			.triangle{
+				font-size: 5vw;
+			}
+			#first-tweet{
+				position: absolute;
+				top:0;
+				left:10px;
+				bottom:0;
+				width:40%;
+				display: flex;
+				align-items: center;
+			}
 		}
 
 		@-moz-document url-prefix() {
